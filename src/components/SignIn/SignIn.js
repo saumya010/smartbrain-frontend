@@ -8,7 +8,7 @@ class Signin extends React.Component {
       signInPassword: ''
     }
   }
-  
+
   onEmailChange = (event) => {
     this.setState({signInEmail: event.target.value})
   }
@@ -18,7 +18,7 @@ class Signin extends React.Component {
   }
 
   onSubmitSignIn = () => {
-    fetch('http://localhost:3000/signin', {
+    fetch('https://polar-tundra-23990.herokuapp.com/signin', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -51,6 +51,7 @@ class Signin extends React.Component {
                   name="email-address"
                   id="email-address"
                   onChange={this.onEmailChange}
+                  required
                 />
               </div>
               <div className="mv3">
@@ -61,6 +62,7 @@ class Signin extends React.Component {
                   name="password"
                   id="password"
                   onChange={this.onPasswordChange}
+                  required
                 />
               </div>
             </fieldset>

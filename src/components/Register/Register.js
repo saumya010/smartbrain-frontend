@@ -23,7 +23,7 @@ class Register extends React.Component {
   }
 
   onSubmitSignIn = () => {
-    fetch('http://localhost:3000/register', {
+    fetch('https://polar-tundra-23990.herokuapp.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -56,6 +56,7 @@ class Register extends React.Component {
                   name="name"
                   id="name"
                   onChange={this.onNameChange}
+                  required
                 />
               </div>
               <div className="mt3">
@@ -66,6 +67,7 @@ class Register extends React.Component {
                   name="email-address"
                   id="email-address"
                   onChange={this.onEmailChange}
+                  required
                 />
               </div>
               <div className="mv3">
@@ -76,6 +78,7 @@ class Register extends React.Component {
                   name="password"
                   id="password"
                   onChange={this.onPasswordChange}
+                  required
                 />
               </div>
             </fieldset>
